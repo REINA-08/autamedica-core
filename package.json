@@ -7,7 +7,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ecucondorSA/autamedica-core.git"
+    "url": "https://github.com/REINA-08/autamedica-core.git"
   },
   "scripts": {
     "build": "pnpm build:packages",
