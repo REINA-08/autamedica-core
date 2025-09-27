@@ -1,6 +1,4 @@
-// Re-export all modules for convenience
-export * from './auth';
-export * from './ui';
-export * from './hooks';
+// Main exports for @autamedica/core
 export * from './types';
 export * from './utils';
+export * from './ui';
