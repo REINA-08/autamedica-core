@@ -1,0 +1,66 @@
+{
+  "name": "@autamedica/core",
+  "version": "0.1.0",
+  "description": "Core packages for Autamedica platform - auth, types, shared utilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecucondorSA/autamedica-core.git"
+  },
+  "scripts": {
+    "build": "pnpm build:packages",
+    "build:packages": "pnpm build:types && pnpm build:shared && pnpm build:auth && pnpm build:hooks && pnpm build:ui",
+    "build:types": "cd types && pnpm build",
+    "build:shared": "cd shared && pnpm build",
+    "build:auth": "cd auth && pnpm build",
+    "build:hooks": "cd hooks && pnpm build",
+    "build:ui": "cd ui && pnpm build",
+    "dev": "pnpm build:packages --watch",
+    "clean": "rm -rf dist && rm -rf */dist",
+    "typecheck": "pnpm --recursive run typecheck",
+    "lint": "pnpm --recursive run lint",
+    "test": "pnpm --recursive run test"
+  },
+  "exports": {
+    "./auth": {
+      "import": "./dist/auth/index.js",
+      "types": "./dist/auth/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./shared": {
+      "import": "./dist/shared/index.js",
+      "types": "./dist/shared/index.d.ts"
+    },
+    "./hooks": {
+      "import": "./dist/hooks/index.js",
+      "types": "./dist/hooks/index.d.ts"
+    },
+    "./ui": {
+      "import": "./dist/ui/index.js",
+      "types": "./dist/ui/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "next": "^15.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "typescript": "5.9.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
