@@ -1,6 +1,6 @@
 {
   "name": "@autamedica/core",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Paquete compartido con componentes, hooks, tipos y utilidades para el ecosistema Autamedica",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
